@@ -68,7 +68,7 @@ int main(int argc, char** argv)
 
     /* Create a windowed mode window and its OpenGL context */
     int width = 0.5*1280;
-    int height = 0.5*720;
+    int height = 0.5*1280;
     window = glfwCreateWindow(width, height, "Image Viewer", NULL, NULL);
     if (!window)
     {

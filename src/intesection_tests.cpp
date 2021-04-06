@@ -48,9 +48,36 @@ void test_sphere(const sphere& s, const ray& r, bool hits, const hit_record& des
       check(hit.front_face == desired.front_face, "error: front facing incorrect", hit, r);
    }
 }
+void test_plane(const plane& p, const ray& r, bool hits, const hit_record& desired) {
+   hit_record hit;
+   bool result = p.hit(r, hit);
+
+   check(result == hits, "error: ray should hit", hit, r);
+   if (hits) {
+      check(vecEquals(hit.p, desired.p), "error: position incorrect:", hit, r);
+      check(vecEquals(hit.normal, desired.normal), "error: normal incorrect:", hit, r);
+      check(equals(hit.t, desired.t), "error: hit time incorrect", hit, r);
+      check(hit.front_face == desired.front_face, "error: front facing incorrect", hit, r);
+   }
+   
+}
+void test_triangle(const triangle& t, const ray& r, bool hits, const hit_record& desired) {
+   hit_record hit;
+   bool result = t.hit(r, hit);
+
+   check(result == hits, "error: ray should hit", hit, r);
+   if (hits) {
+      check(vecEquals(hit.p, desired.p), "error: position incorrect:", hit, r);
+      check(vecEquals(hit.normal, desired.normal), "error: normal incorrect:", hit, r);
+      check(equals(hit.t, desired.t), "error: hit time incorrect", hit, r);
+      check(hit.front_face == desired.front_face, "error: front facing incorrect", hit, r);
+   }
+   
+}
 
 int main(int argc, char** argv)
 {
+
    shared_ptr<material> empty = 0; 
    hit_record none = hit_record{ point3(0), point3(0), -1.0f, false, empty};
 
@@ -80,5 +107,44 @@ int main(int argc, char** argv)
                true, 
                hit_record{vec3(0,0.3432f, 1.9703f), vec3(0,0.1716f, 0.9851f), 0.3432f, true, empty}); 
 
+   plane p(point3(0), vec3(0,1,0), empty);
+   test_plane(p, 
+               ray(point3(0, 2, 0), vec3(0, -5, 0)), // ray outside/towards plane (hit)
+               true,  //hits
+               hit_record{point3(0,0,0), vec3(0,1,0), 0.4, true, empty}); //hit position, normal at hit, time, front?, material
+
+   test_plane(p, 
+               ray(point3(1, 0, 0), vec3(-1, 0, 0)), // ray inside plane (hit)
+               true, //hits
+               hit_record{ vec3(1,0,0), vec3(0,-1,0), 0, false, empty}); 
+   test_plane(p, 
+               ray(point3(0, 0, 0), vec3(0, 1, 0)), // ray outside/away pointing towards the plane (miss)
+               false, //miss
+               none); 
+
+   test_plane(p, 
+               ray(point3(0, 1, 0), vec3(0, 5,0)), // ray outside/away plane (miss)
+               false, 
+               none); 
+
+triangle t(point3(-4,0,0), point3(0,0,4), point3(4,0,0), empty);
+   test_triangle(t, 
+               ray(point3(0, 2, 0), vec3(0, -6, 0)), // ray outside/towards triangle (hit)
+               true,  //hits
+               hit_record{point3(0,0,0), vec3(0,0.707107,0), 0.333333, true, empty}); //hit position, normal at hit, time, front?, material
+
+   test_triangle(t, 
+               ray(point3(0, 0, 0), vec3(4, 0, 0)), // ray inside triangle (hit)
+               false, //miss
+               none); 
+   test_triangle(t, 
+               ray(point3(8, 0, 0), vec3(-1, 0, 0)), // ray outside/away pointing towards the triangle (miss)
+               false, //miss
+               none); 
+
+   test_triangle(t, 
+               ray(point3(0, 2, 0), vec3(0, 2, 0)), // ray outside/away plane (miss)
+               false, //miss
+               none); 
    // TODO: Your tests here
 }

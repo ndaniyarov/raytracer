@@ -1,0 +1,9 @@
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/rebuild_cache.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/materials.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/raytracer.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/basic.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/silhouette.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/intesection_tests.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/normals.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/edit_cache.dir
+/Users/niginadaniyarova/Desktop/cs312/raytracer/build/CMakeFiles/gradient.dir
