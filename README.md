@@ -40,4 +40,14 @@ To run each program from build, you would type
 raytracer/build $ ../bin/gradient
 raytracer/build $ ../bin/normals
 ```
+materials: 
 
+materials.png![image](https://user-images.githubusercontent.com/55757317/113646502-f06d9780-9656-11eb-94a3-d19be207fe83.png)
+
+snowflake using spheres:
+
+snowflake1.png![image](https://user-images.githubusercontent.com/55757317/113646541-0418fe00-9657-11eb-9116-1afeb00652bf.png)
+
+background change and spiral using spheres:
+
+background+spiral.png![image](https://user-images.githubusercontent.com/55757317/113646573-12671a00-9657-11eb-8f71-155126830212.png)
