@@ -267,6 +267,7 @@ CMakeFiles/materials.dir/src/materials.cpp.o: ../src/hittable.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/hittable_list.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/material.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/materials.cpp
+CMakeFiles/materials.dir/src/materials.cpp.o: ../src/plane.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/ppm_image.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/ray.h
 CMakeFiles/materials.dir/src/materials.cpp.o: ../src/sphere.h

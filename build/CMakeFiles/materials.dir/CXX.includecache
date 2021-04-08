@@ -789,12 +789,20 @@ sphere.h
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/sphere.h
 triangle.h
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/triangle.h
+plane.h
+/Users/niginadaniyarova/Desktop/cs312/raytracer/src/plane.h
 camera.h
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/camera.h
 material.h
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/material.h
 hittable_list.h
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/hittable_list.h
+
+/Users/niginadaniyarova/Desktop/cs312/raytracer/src/plane.h
+hittable.h
+/Users/niginadaniyarova/Desktop/cs312/raytracer/src/hittable.h
+AGLM.h
+/Users/niginadaniyarova/Desktop/cs312/raytracer/src/AGLM.h
 
 /Users/niginadaniyarova/Desktop/cs312/raytracer/src/ppm_image.h
 iostream
