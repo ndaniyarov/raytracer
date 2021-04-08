@@ -51,3 +51,8 @@ snowflake1.png![image](https://user-images.githubusercontent.com/55757317/113646
 background change and spiral using spheres:
 
 background+spiral.png![image](https://user-images.githubusercontent.com/55757317/113646573-12671a00-9657-11eb-8f71-155126830212.png)
+
+all primitives (plane, triangle, sphere):
+
+tree.png![image](https://user-images.githubusercontent.com/55757317/114099353-a5d75f80-9890-11eb-9c4b-4736adc60464.png)
+
